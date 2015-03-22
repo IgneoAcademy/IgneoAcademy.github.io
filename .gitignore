@@ -1,0 +1,9 @@
+# Consider adding this to ~/.gitignore_global
+# https://help.github.com/articles/ignoring-files
+
+.DS_Store
+*.txt
+
+log/
+tmp/
+.sass-cache/

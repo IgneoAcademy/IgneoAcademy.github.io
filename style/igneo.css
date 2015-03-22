@@ -1,0 +1,199 @@
+@font-face {
+  font-family: "Quadraat";
+  src: url("/fonts/quadraat.ttf"); }
+
+@font-face {
+  font-family: "Mark";
+  font-weight: 200;
+  src: url("/fonts/MarkLight.otf"); }
+
+@font-face {
+  font-family: "Mark";
+  font-weight: normal;
+  src: url("/fonts/MarkBook.otf"); }
+
+@font-face {
+  font-family: "Mark";
+  font-weight: bold;
+  src: url("/fonts/MarkMedium.otf"); }
+
+/* Variables */
+/* Colors*/
+/* Layout */
+/* Can't @extend .hide from @media directive :( */
+.no-sm {
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .no-sm {
+      display: initial; } }
+
+.no-md {
+  display: none; }
+  @media only screen and (min-width: 992px) {
+    .no-md {
+      display: initial; } }
+
+.no-lg {
+  display: none; }
+  @media only screen and (min-width: 1200px) {
+    .no-lg {
+      display: initial; } }
+
+@media only screen and (min-width: 768px) {
+  .xs-only {
+    display: none; } }
+
+@media only screen and (min-width: 992px) {
+  .sm-only {
+    display: none; } }
+
+@media only screen and (min-width: 1200px) {
+  .md-only {
+    display: none; } }
+
+html, body {
+  height: 100%;
+  font: normal 17px/1.4 "Mark" helvetica sans "Quadraat" serif;
+  -webkit-font-smoothing: antialiased; }
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1000px; } }
+
+.centered, p.banner {
+  text-align: center; }
+
+.sans, .section-head {
+  font-family: "Mark" helvetica sans; }
+
+.serif, p.banner {
+  font-family: "Quadraat" serif; }
+
+.bold, .section-head {
+  font-weight: bold; }
+
+.spaced {
+  margin-bottom: 20px; }
+
+.big-spaced {
+  margin-bottom: 50px; }
+
+.grey {
+  background-color: #f0f0f0; }
+
+.padded {
+  padding: 15px; }
+
+.rounded {
+  border-radius: 2px; }
+
+p {
+  margin-bottom: 0; }
+  p.big {
+    font-size: 120%; }
+  p.banner {
+    font-size: 150%;
+    margin: 30px 0; }
+    @media only screen and (min-width: 992px) {
+      p.banner {
+        font-size: 180%;
+        margin: 50px 0; } }
+
+a {
+  color: #41bdff; }
+  a:hover {
+    transition: color 0.2s;
+    color: #0eabff; }
+
+.row img {
+  width: 100%; }
+  .row img.padded {
+    padding: 0 20px; }
+
+.table.no-border > tbody > tr > td {
+  border-top: none; }
+
+.full-cover, .image-pane > .image-cover {
+  position: absolute;
+  height: 100%;
+  width: 100%; }
+
+.header {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  color: white;
+  transition: all 0.2s;
+  font-size: 80%; }
+  .header.solid {
+    color: black;
+    background-color: white;
+    border-bottom: 1pt solid #ccc; }
+  .header a {
+    color: inherit; }
+    .header a:hover {
+      color: #41BDFF; }
+  .header .item {
+    float: left;
+    padding-left: 0; }
+    .header .item.selected {
+      text-decoration: underline; }
+  .header .right {
+    float: right; }
+    .header .right .item {
+      padding-right: 0;
+      padding-left: 20px; }
+
+.footer {
+  background-color: #555;
+  padding: 40px 0;
+  color: white; }
+
+.img, .image-pane {
+  background-image: url("/images/spinner.gif");
+  background-color: #eee;
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%; }
+  .img.loaded, .loaded.image-pane {
+    background-size: cover; }
+    .img.loaded.contain, .loaded.contain.image-pane {
+      background-position: top left;
+      background-size: contain; }
+
+.image-pane {
+  width: 100%;
+  height: 250px;
+  position: relative; }
+  @media only screen and (min-width: 768px) {
+    .image-pane {
+      height: 400px; } }
+  .image-pane.main {
+    background-image: url("/images/space.jpg"); }
+  .image-pane.program {
+    background-image: none; }
+  .image-pane > .image-cover {
+    background-color: rgba(0, 0, 0, 0.7); }
+  .image-pane > .inner-text {
+    position: relative;
+    z-index: 1;
+    padding-top: 75px;
+    font-size: 180%;
+    color: white; }
+    @media only screen and (min-width: 768px) {
+      .image-pane > .inner-text {
+        padding-top: 150px;
+        font-size: 250%; } }
+
+.section-head {
+  margin-bottom: 10px;
+  font-size: 120%; }
+
+.box {
+  border-radius: 2px;
+  border: 1pt solid #eee;
+  padding: 15px; }

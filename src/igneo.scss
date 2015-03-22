@@ -1,0 +1,172 @@
+@import "variables";
+
+html, body {
+  height: 100%;
+  font: normal 17px/1.4 $sans $serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  @include lg {
+    width: 1000px;
+  }
+}
+
+.centered { text-align: center; }
+.sans { font-family: $sans; }
+.serif { font-family: $serif; }
+.bold { font-weight: bold; }
+.spaced { margin-bottom: 20px; }
+.big-spaced { margin-bottom: 50px; }
+.grey { background-color: #f0f0f0; }
+.padded { padding: 15px; }
+.rounded { border-radius: 2px; }
+
+p {
+  margin-bottom: 0;
+  &.big { font-size: 120%; }
+  &.banner {
+    @extend .serif;
+    @extend .centered;
+    font-size: 150%;
+    margin: 30px 0;
+    @include md {
+      font-size: 180%;
+      margin: 50px 0;
+    }
+  }
+}
+
+a {
+  color: $blue;
+  &:hover {
+    transition: color 0.2s;
+    color: darken($blue, 10%);
+  }
+}
+
+.row {
+  img {
+    width: 100%;
+    &.padded {
+      padding: 0 20px;
+    }
+  }
+}
+
+.table.no-border > tbody > tr > td {
+  border-top: none;
+}
+
+.full-cover {
+  position: absolute;
+  height: 100%; width: 100%;
+}
+
+$header-height: 40px;
+.header {
+  z-index: 2;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  padding: 15px 0;
+  color: white;
+  transition: all 0.2s;
+  font-size: 80%;
+  &.solid {
+    color: black;
+    background-color: white;
+    border-bottom: 1pt solid #ccc;
+  }
+  a {
+    color: inherit;
+    &:hover {
+      color: #41BDFF;
+    }
+  }
+  .item {
+    float: left;
+    // padding: 10px 20px;
+    padding-left: 0;
+    &.selected {
+      text-decoration: underline;
+    }
+  }
+  .right {
+    float: right;
+    .item {
+      padding-right: 0;
+      padding-left: 20px;
+    }
+  }
+}
+
+.footer {
+  background-color: #555;
+  padding: 40px 0;
+  color: white;
+}
+
+// Class for divs with background images. Please don't
+// change because a lot of things @extend it.
+.img {
+  background-image: url('/images/spinner.gif');
+  background-color: #eee; // Same as loader gif (images/icons/spinner.gif)
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  &.loaded {
+    background-size: cover;
+    &.contain {
+      background-position: top left;
+      background-size: contain;
+    }
+  }
+}
+
+$pane-height: 250px;
+$large-pane-height: 400px;
+.image-pane {
+  @extend .img;
+  width: 100%;
+  height: $pane-height;
+  @include sm {
+    height: $large-pane-height;
+  }
+  position: relative;
+  &.main {
+    background-image: url('/images/space.jpg');
+  }
+  &.program {
+    background-image: none;
+  }
+  > .image-cover {
+    @extend .full-cover;
+    background-color: rgba(0,0,0,0.7);
+  }
+  > .inner-text {
+    position: relative;
+    z-index: 1;
+    padding-top: 75px;
+    font-size: 180%;
+    @include sm {
+      padding-top: 150px;
+      font-size: 250%;
+    }
+    color: white;
+  }
+}
+
+.section-head {
+  @extend .bold;
+  @extend .sans;
+  margin-bottom: 10px;
+  font-size: 120%;
+}
+
+.box {
+  border-radius: 2px;
+  border: 1pt solid #eee;
+  padding: 15px;
+}

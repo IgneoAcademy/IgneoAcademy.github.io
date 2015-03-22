@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Quadraat";
+  src: url('/fonts/quadraat.ttf');
+}
+@font-face {
+  font-family: "Mark";
+  font-weight: 200;
+  src: url('/fonts/MarkLight.otf');
+}
+@font-face {
+  font-family: "Mark";
+  font-weight: normal;
+  src: url('/fonts/MarkBook.otf');
+}
+@font-face {
+  font-family: "Mark";
+  font-weight: bold;
+  src: url('/fonts/MarkMedium.otf');
+}
+
+@mixin opacity($o) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$o})";
+  -moz-opacity: $o;
+  -khtml-opacity: $o;
+  opacity: $o;
+  // filter: alpha(opacity=$o);
+}
+
+/* Variables */
+$serif: "Quadraat" serif;
+$sans: "Mark" helvetica sans;
+/* Colors*/
+$blue: #41BDFF;
+
+/* Layout */
+// Widths are upper bounds
+$xs-width: 480px;  // "Phone" width
+$sm-width: 768px;  // Bootstrap sm
+$md-width: 992px;  // Bootstrap md
+$lg-width: 1200px; // Bootstrap lg
+
+// Always use in ascending order; sm applies to sm, md, and lg. 
+@mixin sm {
+  @media only screen and (min-width: #{$sm-width}) { @content; }
+}
+@mixin md {
+  @media only screen and (min-width: #{$md-width}) { @content; }
+}
+@mixin lg {
+  @media only screen and (min-width: #{$lg-width}) { @content; }
+}
+/* Can't @extend .hide from @media directive :( */
+
+// Hide below given width
+.no-sm {
+  display: none;
+  @include sm {
+    display: initial;
+  }
+}
+.no-md {
+  display: none;
+  @include md {
+    display: initial;
+  }
+}
+.no-lg {
+  display: none;
+  @include lg {
+    display: initial;
+  }
+}
+// Hide above certain width
+.xs-only {
+  @include sm {
+    display: none;
+  }
+}
+.sm-only {
+  @include md {
+    display: none;
+  }
+}
+.md-only {
+  @include lg {
+    display: none;
+  }
+}
+
