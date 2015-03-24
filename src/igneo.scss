@@ -52,16 +52,28 @@ a {
   img {
     display: block;
     width: 100%;
-    max-width: 150px;
     margin: 0 auto;
+  }
+}
+
+img {
+  &.icon {
+    max-width: 150px;
     @include sm {
       max-width: inherit;
     }
-    &.mobile-padded {
+  }
+  &.person {
+    border-radius: 200px; // Circular
+    &.small {
+      max-width: 200px;
       padding: 20px;
-      @include sm {
-        padding: 0 20px;
-      }
+    }
+  }
+  &.mobile-padded {
+    padding: 20px;
+    @include sm {
+      padding: 0 20px;
     }
   }
 }
@@ -85,7 +97,7 @@ $header-height: 40px;
   color: white;
   transition: all 0.2s;
   font-size: 80%;
-  &.solid {
+  &.solid, &.always-solid {
     color: black;
     background-color: white;
     border-bottom: 1pt solid #ccc;

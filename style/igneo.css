@@ -114,16 +114,23 @@ a {
 .row img {
   display: block;
   width: 100%;
-  max-width: 150px;
   margin: 0 auto; }
+
+img.icon {
+  max-width: 150px; }
   @media only screen and (min-width: 768px) {
-    .row img {
+    img.icon {
       max-width: inherit; } }
-  .row img.mobile-padded {
+img.person {
+  border-radius: 200px; }
+  img.person.small {
+    max-width: 200px;
     padding: 20px; }
-    @media only screen and (min-width: 768px) {
-      .row img.mobile-padded {
-        padding: 0 20px; } }
+img.mobile-padded {
+  padding: 20px; }
+  @media only screen and (min-width: 768px) {
+    img.mobile-padded {
+      padding: 0 20px; } }
 
 .table.no-border > tbody > tr > td {
   border-top: none; }
@@ -143,7 +150,7 @@ a {
   color: white;
   transition: all 0.2s;
   font-size: 80%; }
-  .header.solid {
+  .header.solid, .header.always-solid {
     color: black;
     background-color: white;
     border-bottom: 1pt solid #ccc; }
