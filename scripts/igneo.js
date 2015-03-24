@@ -19,9 +19,10 @@ $.fn.smarterbg = function(cf, cb) {
 }
 
 $(document).ready(function() {
+  var cutoff = $(window).width() <= 768 ? 230 : 380;
   $(window).scroll(function() {
     var top = $(document).scrollTop();
-    top > 380 ? $(".header").addClass("solid") :
+    top > cutoff ? $(".header").addClass("solid") :
       $(".header").removeClass("solid");
   });
 });
