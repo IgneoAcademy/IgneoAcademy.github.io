@@ -15,7 +15,7 @@
 @font-face {
   font-family: "Mark";
   font-weight: bold;
-  src: url("/fonts/MarkMedium.otf"); }
+  src: url("/fonts/MarkBold.otf"); }
 
 /* Variables */
 /* Colors*/
@@ -47,6 +47,6 @@
   .sm-only {
     display: none; } }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   .md-only {
     display: none; } }

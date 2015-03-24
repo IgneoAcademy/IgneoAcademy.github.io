@@ -8,7 +8,7 @@ html, body {
 
 .container {
   @include lg {
-    width: 900px;
+    width: 1000px;
   }
 }
 
@@ -21,6 +21,7 @@ html, body {
 .grey { background-color: #f0f0f0; }
 .padded { padding: 15px; }
 .rounded { border-radius: 2px; }
+.bigger { font-size: 120%; }
 
 .blue { color: $blue; }
 
@@ -169,7 +170,7 @@ $large-pane-height: 400px;
     @include sm { padding-top: 130px; } // All other screens
     .big {
       font-size: 180%;
-      @include sm { font-size: 250%; }
+      @include sm { font-size: 300%; }
     }
     .small {
       font-size: 100%; 
@@ -189,6 +190,9 @@ $large-pane-height: 400px;
   @extend .sans;
   margin-bottom: 10px;
   font-size: 120%;
+  &.bigger {
+    font-size: 150%;
+  }
 }
 
 .box {
