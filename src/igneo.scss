@@ -6,33 +6,6 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-.container {
-  @include lg {
-    width: 1000px;
-  }
-  &.top-pad {
-    padding-top: 40px;
-    &.big {
-      padding-top: 80px;
-    }
-  }
-}
-
-.centered { text-align: center; }
-.sans { font-family: $sans; }
-.serif { font-family: $serif; }
-.bold { font-weight: bold; }
-.spaced { margin-bottom: 20px; }
-.big-spaced { margin-bottom: 50px; }
-.grey { background-color: #f0f0f0; }
-.padded { padding: 15px; }
-.rounded { border-radius: 2px; }
-.bigger { font-size: 120%; }
-
-.blue { color: $blue; }
-.red { color: $red; }
-.green { color: $green; }
-
 p {
   margin-bottom: 0;
   &.big { font-size: 120%; }
@@ -56,14 +29,6 @@ a {
   }
 }
 
-.row {
-  img {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
 img {
   &.icon {
     max-width: 150px;
@@ -83,6 +48,26 @@ img {
   &.small {
     max-width: 200px;
     padding: 20px;
+  }
+}
+
+.container {
+  @include lg {
+    width: 1000px;
+  }
+  &.top-pad {
+    padding-top: 40px;
+    &.big {
+      padding-top: 80px;
+    }
+  }
+}
+
+.row {
+  img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -155,27 +140,6 @@ img {
   }
 }
 
-$circle-height: 70px;
-$circle-sm-height: 150px;
-.circle {
-  height: $circle-height;
-  width: $circle-height;
-  line-height: $circle-height;
-  font-size: 60%;
-  @include sm {
-    height: $circle-sm-height;
-    width: $circle-sm-height;
-    line-height: $circle-sm-height;
-    font-size: inherit;
-  }
-  margin: 0 auto;
-  border-radius: 100px;
-  border: 2pt solid #ccc;
-  &.blue-back { border-color: $blue; }
-  &.green-back { border-color: $green; }
-  &.red-back { border-color: $red; }
-}
-
 .footer {
   background-color: #555;
   margin-top: 20px;
@@ -187,31 +151,13 @@ $circle-sm-height: 150px;
   color: white;
 }
 
-// Class for divs with background images. Please don't
-// change because a lot of things @extend it.
-.img {
-  background-image: url('/images/spinner.gif');
-  background-color: #eee; // Same as loader gif (images/icons/spinner.gif)
-  background-size: auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-  &.loaded {
-    background-size: cover;
-    &.contain {
-      background-position: top left;
-      background-size: contain;
-    }
-  }
-}
-
 $pane-height: 250px;
 $large-pane-height: 400px;
 .image-pane {
-  @extend .img;
   width: 100%;
   height: $pane-height;
   position: relative;
+  background-repeat: no-repeat;
   @include sm {
     height: $large-pane-height;
     background-attachment: fixed;
@@ -270,6 +216,37 @@ $large-pane-height: 400px;
   border-radius: 2px;
   border: 1pt solid #eee;
   padding: 15px;
+  &.tech {
+    height: 300px;
+  }
+  .box-icon {
+    padding: 20px 40px;
+  }
+}
+
+$circle-height: 70px;
+$circle-sm-height: 150px;
+.circle {
+  height: $circle-height;
+  width: $circle-height;
+  line-height: $circle-height;
+  font-size: 60%;
+  // background-image: url('/images/favicon-outline.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  // color: white;
+  @include sm {
+    height: $circle-sm-height;
+    width: $circle-sm-height;
+    line-height: $circle-sm-height;
+    font-size: inherit;
+  }
+  margin: 0 auto;
+  border-radius: 100px;
+  border: 2pt solid #ccc;
+  &.blue-back { border-color: $blue; }
+  &.green-back { border-color: $green; }
+  &.red-back { border-color: $red; }
 }
 
 .mailchimp-input {
@@ -288,8 +265,11 @@ $large-pane-height: 400px;
 }
 
 .mailchimp-submit {
+  border-color: $blue;
+  transition: all 0.2s;
   background-color: transparent;
   &:hover {
-    border-color: $blue;
+    color: white;
+    background-color: $blue;
   }
 }

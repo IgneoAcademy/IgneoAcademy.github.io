@@ -51,19 +51,6 @@
   .md-only {
     display: none; } }
 
-html, body {
-  height: 100%;
-  font: normal 17px/1.4 "Mark" helvetica sans "Quadraat" serif;
-  -webkit-font-smoothing: antialiased; }
-
-@media only screen and (min-width: 1200px) {
-  .container {
-    width: 1000px; } }
-.container.top-pad {
-  padding-top: 40px; }
-  .container.top-pad.big {
-    padding-top: 80px; }
-
 .centered, p.banner {
   text-align: center; }
 
@@ -103,6 +90,11 @@ html, body {
 .green {
   color: #56f04d; }
 
+html, body {
+  height: 100%;
+  font: normal 17px/1.4 "Mark" helvetica sans "Quadraat" serif;
+  -webkit-font-smoothing: antialiased; }
+
 p {
   margin-bottom: 0; }
   p.big {
@@ -121,11 +113,6 @@ a {
     transition: color 0.2s;
     color: #4195ea; }
 
-.row img {
-  display: block;
-  width: 100%;
-  margin: 0 auto; }
-
 img.icon {
   max-width: 150px; }
   @media only screen and (min-width: 768px) {
@@ -141,6 +128,19 @@ img.mobile-padded {
 img.small {
   max-width: 200px;
   padding: 20px; }
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1000px; } }
+.container.top-pad {
+  padding-top: 40px; }
+  .container.top-pad.big {
+    padding-top: 80px; }
+
+.row img {
+  display: block;
+  width: 100%;
+  margin: 0 auto; }
 
 .table.no-border > tbody > tr > td {
   border-top: none; }
@@ -199,27 +199,6 @@ img.small {
         .header .right .item {
           padding-left: 20px; } }
 
-.circle {
-  height: 70px;
-  width: 70px;
-  line-height: 70px;
-  font-size: 60%;
-  margin: 0 auto;
-  border-radius: 100px;
-  border: 2pt solid #ccc; }
-  @media only screen and (min-width: 768px) {
-    .circle {
-      height: 150px;
-      width: 150px;
-      line-height: 150px;
-      font-size: inherit; } }
-  .circle.blue-back {
-    border-color: #6fafef; }
-  .circle.green-back {
-    border-color: #56f04d; }
-  .circle.red-back {
-    border-color: #ff4945; }
-
 .footer {
   background-color: #555;
   margin-top: 20px;
@@ -230,23 +209,11 @@ img.small {
       margin-top: 30px;
       padding: 40px 0; } }
 
-.img, .image-pane {
-  background-image: url("/images/spinner.gif");
-  background-color: #eee;
-  background-size: auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%; }
-  .img.loaded, .loaded.image-pane {
-    background-size: cover; }
-    .img.loaded.contain, .loaded.contain.image-pane {
-      background-position: top left;
-      background-size: contain; }
-
 .image-pane {
   width: 100%;
   height: 250px;
-  position: relative; }
+  position: relative;
+  background-repeat: no-repeat; }
   @media only screen and (min-width: 768px) {
     .image-pane {
       height: 400px;
@@ -297,6 +264,33 @@ img.small {
   border-radius: 2px;
   border: 1pt solid #eee;
   padding: 15px; }
+  .box.tech {
+    height: 300px; }
+  .box .box-icon {
+    padding: 20px 40px; }
+
+.circle {
+  height: 70px;
+  width: 70px;
+  line-height: 70px;
+  font-size: 60%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  border-radius: 100px;
+  border: 2pt solid #ccc; }
+  @media only screen and (min-width: 768px) {
+    .circle {
+      height: 150px;
+      width: 150px;
+      line-height: 150px;
+      font-size: inherit; } }
+  .circle.blue-back {
+    border-color: #6fafef; }
+  .circle.green-back {
+    border-color: #56f04d; }
+  .circle.red-back {
+    border-color: #ff4945; }
 
 .mailchimp-input {
   width: 100%;
@@ -311,6 +305,9 @@ img.small {
     border-color: #6fafef; }
 
 .mailchimp-submit {
+  border-color: #6fafef;
+  transition: all 0.2s;
   background-color: transparent; }
   .mailchimp-submit:hover {
-    border-color: #6fafef; }
+    color: white;
+    background-color: #6fafef; }

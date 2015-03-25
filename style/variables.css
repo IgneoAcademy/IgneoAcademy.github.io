@@ -50,3 +50,42 @@
 @media only screen and (min-width: 1200px) {
   .md-only {
     display: none; } }
+
+.centered {
+  text-align: center; }
+
+.sans {
+  font-family: "Mark" helvetica sans; }
+
+.serif {
+  font-family: "Quadraat" serif; }
+
+.bold {
+  font-weight: bold; }
+
+.spaced {
+  margin-bottom: 20px; }
+
+.big-spaced {
+  margin-bottom: 50px; }
+
+.grey {
+  background-color: #f0f0f0; }
+
+.padded {
+  padding: 15px; }
+
+.rounded {
+  border-radius: 2px; }
+
+.bigger {
+  font-size: 120%; }
+
+.blue {
+  color: #6fafef; }
+
+.red {
+  color: #ff4945; }
+
+.green {
+  color: #56f04d; }
