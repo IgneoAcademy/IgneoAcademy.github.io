@@ -155,17 +155,22 @@ img {
   }
 }
 
+$circle-height: 70px;
+$circle-sm-height: 150px;
 .circle {
-  height: 70px;
-  width: 70px;
+  height: $circle-height;
+  width: $circle-height;
+  line-height: $circle-height;
+  font-size: 60%;
   @include sm {
-    height: 150px;
-    width: 150px;
+    height: $circle-sm-height;
+    width: $circle-sm-height;
+    line-height: $circle-sm-height;
+    font-size: inherit;
   }
   margin: 0 auto;
   border-radius: 100px;
   border: 2pt solid #ccc;
-  color: white;
   &.blue-back { border-color: $blue; }
   &.green-back { border-color: $green; }
   &.red-back { border-color: $red; }

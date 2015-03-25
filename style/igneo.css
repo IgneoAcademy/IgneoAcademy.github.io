@@ -202,14 +202,17 @@ img.small {
 .circle {
   height: 70px;
   width: 70px;
+  line-height: 70px;
+  font-size: 60%;
   margin: 0 auto;
   border-radius: 100px;
-  border: 2pt solid #ccc;
-  color: white; }
+  border: 2pt solid #ccc; }
   @media only screen and (min-width: 768px) {
     .circle {
       height: 150px;
-      width: 150px; } }
+      width: 150px;
+      line-height: 150px;
+      font-size: inherit; } }
   .circle.blue-back {
     border-color: #6fafef; }
   .circle.green-back {
