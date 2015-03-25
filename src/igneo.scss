@@ -271,3 +271,25 @@ $large-pane-height: 400px;
   border: 1pt solid #eee;
   padding: 15px;
 }
+
+.mailchimp-input {
+  width: 100%;
+  padding: 10px;
+  border: 1pt solid #ccc;
+  border-radius: 2px;
+  transition: border-color 0.2s;
+}
+
+.mailchimp-email {
+  outline: 0;
+  &:focus {
+    border-color: $blue;
+  }
+}
+
+.mailchimp-submit {
+  background-color: transparent;
+  &:hover {
+    border-color: $blue;
+  }
+}

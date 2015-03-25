@@ -297,3 +297,20 @@ img.small {
   border-radius: 2px;
   border: 1pt solid #eee;
   padding: 15px; }
+
+.mailchimp-input {
+  width: 100%;
+  padding: 10px;
+  border: 1pt solid #ccc;
+  border-radius: 2px;
+  transition: border-color 0.2s; }
+
+.mailchimp-email {
+  outline: 0; }
+  .mailchimp-email:focus {
+    border-color: #6fafef; }
+
+.mailchimp-submit {
+  background-color: transparent; }
+  .mailchimp-submit:hover {
+    border-color: #6fafef; }
