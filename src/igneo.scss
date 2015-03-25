@@ -4,7 +4,6 @@ html, body {
   height: 100%;
   font: normal 17px/1.4 $sans $serif;
   -webkit-font-smoothing: antialiased;
-  background-color: #fafafa;
 }
 
 .container {
@@ -109,15 +108,24 @@ img {
     font-size: 80%;
     padding: 15px 0;
   }
+  .show-solid {
+    display: none;
+  }
   &.solid, &.always-solid {
     color: black;
     background-color: white;
     border-bottom: 1pt solid #eee;
+    .show-solid {
+      display: inherit;
+    }
+    .hide-solid {
+      display: none;
+    }
   }
   a {
     color: inherit;
     &:hover {
-      color: #41BDFF;
+      color: $blue;
     }
   }
   .item {
@@ -126,6 +134,11 @@ img {
     &.selected {
       text-decoration: underline;
     }
+  }
+  .logo {
+    margin-top: -5px;
+    height: 25px;
+    width: auto;
   }
   .right {
     float: right;
@@ -148,10 +161,11 @@ img {
   }
   margin: 0 auto;
   border-radius: 100px;
+  border: 2pt solid #ccc;
   color: white;
-  &.blue-back { background-color: $blue; }
-  &.green-back { background-color: $green; }
-  &.red-back { background-color: $red; }
+  &.blue-back { border-color: $blue; }
+  &.green-back { border-color: $green; }
+  &.red-back { border-color: $red; }
 }
 
 .footer {
@@ -215,7 +229,7 @@ $large-pane-height: 400px;
     padding-top: 70px; // Small screens
     @include sm { padding-top: 130px; } // All other screens
     .big {
-      font-size: 180%;
+      font-size: 150%;
       @include sm { font-size: 300%; }
     }
     .small {

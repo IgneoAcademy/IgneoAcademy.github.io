@@ -54,8 +54,7 @@
 html, body {
   height: 100%;
   font: normal 17px/1.4 "Mark" helvetica sans "Quadraat" serif;
-  -webkit-font-smoothing: antialiased;
-  background-color: #fafafa; }
+  -webkit-font-smoothing: antialiased; }
 
 @media only screen and (min-width: 1200px) {
   .container {
@@ -96,13 +95,13 @@ html, body {
   font-size: 120%; }
 
 .blue {
-  color: #41bdff; }
+  color: #6fafef; }
 
 .red {
   color: #ff4945; }
 
 .green {
-  color: #5cff52; }
+  color: #56f04d; }
 
 p {
   margin-bottom: 0; }
@@ -117,10 +116,10 @@ p {
         margin: 40px 0; } }
 
 a {
-  color: #41bdff; }
+  color: #6fafef; }
   a:hover {
     transition: color 0.2s;
-    color: #0eabff; }
+    color: #4195ea; }
 
 .row img {
   display: block;
@@ -165,19 +164,29 @@ img.small {
     .header {
       font-size: 80%;
       padding: 15px 0; } }
+  .header .show-solid {
+    display: none; }
   .header.solid, .header.always-solid {
     color: black;
     background-color: white;
     border-bottom: 1pt solid #eee; }
+    .header.solid .show-solid, .header.always-solid .show-solid {
+      display: inherit; }
+    .header.solid .hide-solid, .header.always-solid .hide-solid {
+      display: none; }
   .header a {
     color: inherit; }
     .header a:hover {
-      color: #41BDFF; }
+      color: #6fafef; }
   .header .item {
     float: left;
     padding-left: 0; }
     .header .item.selected {
       text-decoration: underline; }
+  .header .logo {
+    margin-top: -5px;
+    height: 25px;
+    width: auto; }
   .header .right {
     float: right; }
     .header .right .item {
@@ -192,17 +201,18 @@ img.small {
   width: 70px;
   margin: 0 auto;
   border-radius: 100px;
+  border: 2pt solid #ccc;
   color: white; }
   @media only screen and (min-width: 768px) {
     .circle {
       height: 150px;
       width: 150px; } }
   .circle.blue-back {
-    background-color: #41bdff; }
+    border-color: #6fafef; }
   .circle.green-back {
-    background-color: #5cff52; }
+    border-color: #56f04d; }
   .circle.red-back {
-    background-color: #ff4945; }
+    border-color: #ff4945; }
 
 .footer {
   background-color: #555;
@@ -254,7 +264,7 @@ img.small {
       .image-pane > .inner-text {
         padding-top: 130px; } }
     .image-pane > .inner-text .big {
-      font-size: 180%; }
+      font-size: 150%; }
       @media only screen and (min-width: 768px) {
         .image-pane > .inner-text .big {
           font-size: 300%; } }
