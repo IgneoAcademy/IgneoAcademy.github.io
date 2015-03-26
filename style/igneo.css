@@ -54,6 +54,9 @@
 .centered, p.banner {
   text-align: center; }
 
+.justified {
+  text-align: justify; }
+
 .sans, .section-head {
   font-family: "Mark" helvetica sans; }
 

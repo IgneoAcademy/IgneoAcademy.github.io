@@ -54,6 +54,9 @@
 .centered {
   text-align: center; }
 
+.justified {
+  text-align: justify; }
+
 .sans {
   font-family: "Mark" helvetica sans; }
 
